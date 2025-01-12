@@ -241,9 +241,6 @@ def save_tiktok(video_url,
                 browser_name=None):
     if 'cookies' not in globals() and browser_name is None:
         raise BrowserNotSpecifiedError
-    if save_video == False and metadata_fn == '':
-        print('Since save_video and metadata_fn are both False/blank, the program did nothing.')
-        return
 
     tt_json = get_tiktok_json(video_url,browser_name)
 
